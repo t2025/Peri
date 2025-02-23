@@ -1,0 +1,26 @@
+{
+    "Student_sample_1.mp4":{
+    "engagement": 13.59,
+    "boredom": 81.37,
+    "frustration": 2.49,
+    "confusion": 2.55
+    },
+    "Soumayya_1.mp4": {
+        "engagement": 47.90,
+        "boredom": 10.53,
+        "frustration": 1.17,
+        "confusion": 0.40
+    },
+    "tanvi_sample_1":{
+        "engagement": 32.00,
+        "boredom": 18.22,
+        "frustration": 27.23,
+        "confusion": 22.55
+    },
+    "group_sample_1":{
+        "engagement": 60,
+        "boredom": 15,
+        "frustration": 10,
+        "confusion": 15
+    }
+}

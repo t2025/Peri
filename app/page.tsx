@@ -71,26 +71,32 @@ export default function LearningStatesUploader() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center w-full px-4">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center w-full">
       {/* Header Section */}
-      <div className="w-full bg-[#002f56] text-white text-center py-6 text-lg font-semibold flex items-center justify-center shadow-md">
-        PERI: PEDAGOGICAL & EDUCATIONAL REINFORCEMENT INTERVENTION
-      </div>
+            {/* Header Section */}
+            <div className="w-full bg-[#002f56] text-white text-center py-4 text-lg font-semibold">
+                PERI: PEDAGOGICAL & EDUCATIONAL REINFORCEMENT INTERVENTION
+            </div>
 
       {/* Main Content */}
       <div className="w-4/5 max-w-2xl mt-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Detecting and Analyzing Learning States
-        </h2>
-        <p className="text-gray-600 mb-4">What is PERI?</p>
-        <p className="text-gray-700 mb-4">
-          This AI-powered tool classifies students' cognitive learning states—Engagement, Confusion, Boredom, and Frustration—by analyzing short video clips. Our goal is to enhance personalized learning and improve student outcomes.
-        </p>
-        <ul className="list-disc list-inside text-gray-600 mb-4">
-          <li>Upload a short video of a student learning or record a new one.</li>
-          <li>Our AI will analyze engagement levels.</li>
-          <li>Get insights on cognitive learning states!</li>
-        </ul>
+      <h2 className="text-2xl font-bold text-gray-900 mb-2">
+  Detecting and Analyzing Learning States
+</h2>
+<p className="text-gray-600 mb-4 text-lg font-semibold">What is PERI?</p>
+<p className="text-gray-700 mb-4">
+  PERI is an AI-powered tool designed to analyze and classify students' cognitive learning states—Engagement, Confusion, Boredom, and Frustration—by processing short video clips. 
+</p>
+<h3 className="text-xl font-semibold text-gray-800 mb-3">How It Works:</h3>
+<ul className="list-disc list-inside text-gray-600 mb-4">
+  <li>📹 <strong>Upload or Record a Video</strong>: Provide a short video clip of a student engaged in a learning activity.</li>
+  <li>🧠 <strong>AI-Powered Analysis</strong>: Our advanced model will assess engagement levels, identifying signs of focus, confusion, boredom, or frustration.</li>
+  <li>📊 <strong>Get Actionable Insights</strong>: Receive a detailed report on the cognitive learning states, helping tailor interventions for better learning outcomes.</li>
+</ul>
+<p className="text-gray-700 mb-4">
+  Whether you're an educator looking to enhance classroom engagement or a student striving for improved learning experiences, PERI empowers you with data-driven insights to optimize the educational journey. 
+</p>
+
 
         {/* Upload & Record Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-6">
@@ -152,7 +158,7 @@ export default function LearningStatesUploader() {
       </div>
 
       {/* Footer Image */}
-      <div className="mt-6 w-4/5 flex justify-center">
+      <div className="mt-4 w-4/5 flex justify-center">
                 <img src="/ai_institute_image.png" alt="Illustration" className="w-4/5 h-48 object-cover rounded-lg" />
             </div>
             </div>

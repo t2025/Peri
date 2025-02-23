@@ -39,8 +39,35 @@ export default function NextPage() {
     };
 
     const sendEmail = () => {
-        window.location.href = `mailto:?subject=Student Engagement Report&body=Based on today's class activities, we noticed that today's engagement score was ${selectedData?.engagement}%.%0D%0A%0D%0ABoredom: ${selectedData?.boredom}%0D%0AFrustration: ${selectedData?.frustration}%0D%0AConfusion: ${selectedData?.confusion}%0D%0A%0D%0AHere are a few tips if you are struggling with focus:%0D%0A1. Try reading%0D%0A2. Engage in mind games%0D%0A3. Meditate%0D%0A%0D%0APlease note that today's lecture will be asked in a quiz to help reinforce the content.`;
+        const subject = encodeURIComponent("Student Engagement Report");
+        const body = encodeURIComponent(
+            `Hello,
+    
+    Based on today's class activities, we have analyzed the engagement levels and here are the results:
+    
+    📊 **Engagement Score:** ${selectedData?.engagement}%
+    
+    🟡 **Boredom:** ${selectedData?.boredom}%
+    🔴 **Frustration:** ${selectedData?.frustration}%
+    🟠 **Confusion:** ${selectedData?.confusion}%
+    
+    💡 If you’re struggling with focus, here are some helpful strategies to enhance your engagement:
+    1️⃣ Break Learning into Chunks– Study in short sessions with breaks to improve concentration.
+    2️⃣ Interactive Learning – Try using mind games, quizzes, or group discussions to stay engaged.
+    3️⃣ Mindfulness & Meditation – Practicing mindfulness can enhance focus and reduce distractions.
+    4️⃣ Active Participation – Asking questions and engaging in discussions boosts retention.
+    
+    ⚠️ Reminder: Today's lecture content will be included in an upcoming quiz. Reviewing the material and engaging in class discussions can help reinforce learning.
+    
+    Stay curious and keep up the effort!
+    
+    Best,  
+    [Your Name or Institution]`
+        );
+    
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
     };
+    
 
     const selectedData = reportData ? reportData[selectedSample] : null;
 
@@ -111,7 +138,7 @@ Keep up the effort, and aim for even greater engagement! You're capable of achie
                     <br/>
                     <br/>
                     <div className="flex justify-center items-center space-x-4">
-    <button onClick={saveAsPDF} className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700">
+    <button onClick={saveAsPDF} className="px-4 py-2 bg-[#ffc72c] text-white rounded-lg shadow-md hover:bg-yellow-700">
         Save as PDF
     </button>
     <button onClick={sendEmail} className="px-4 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700">
